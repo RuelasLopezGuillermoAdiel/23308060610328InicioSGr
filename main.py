@@ -15,16 +15,30 @@ def main(page: ft.Page):
         label = "Escribe Tu Contraseña",
         hint_text = "Escribe Tu Contraseña"
     )
+    
+    def login_click(e):
+        contraseña = txt_contraseñaUS.value
+        
+        if usuario == USUARIO_VALIDO and contraseña == CONTRASEÑA_VALIDA:
+            page.show_dialog(ft.SnackBar(ft.Text("!Inicio de secion exitoso!")))
+            
+        else: page.show_dialog(ft.SnackBar(ft.Text("Usuario o Contraseña Incorrectos.")))
+        
+    def forgot_clicl(e):
+        page.show_dialog(ft.Snackbar(ft.Text("se han enviado instrucciones a tu correo electronico")))
+        
+    txt_usuario=ft.TextField(lavel="Usuario", autofocus=True)
+    txt_contraseña=ft.TextField(label="Contraseña", password=Tr)
+    
     IniciarS = ft.Button(content="iniciar Sesion",
     width=200,
         color=ft.Colors.BLACK,
         bgcolor=ft.Colors.GREEN_200,
     
     )
-    Registrarse = ft.Button(content="Registrate!",
-    width=150,
-        color=ft.Colors.BLACK,
-        bgcolor=ft.Colors.BLUE_600,
+    Registrarse = ft.TextButton(
+        "Olvidaste tu contraseña?",
+        on_click = forgot_click,
     )
     page.add( 
         ft.Icon(ft.Icons.LOGIN, color=ft.Colors.PRIMARY, size=150),
