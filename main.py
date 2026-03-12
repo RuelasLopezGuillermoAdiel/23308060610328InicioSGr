@@ -2,7 +2,7 @@ import flet as ft
 
 def main(page: ft.Page):
     page.title = "Inicio de sesion"
-    
+    page.bgcolor = ft.Colors.BLUE_100
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     
@@ -18,13 +18,13 @@ def main(page: ft.Page):
     IniciarS = ft.Button(content="iniciar Sesion",
     width=200,
         color=ft.Colors.BLACK,
-        bgcolor=ft.Colors.GREEN,
+        bgcolor=ft.Colors.GREEN_200,
     
     )
     Registrarse = ft.Button(content="Registrate!",
     width=150,
         color=ft.Colors.BLACK,
-        bgcolor=ft.Colors.BLUE,
+        bgcolor=ft.Colors.BLUE_600,
     )
     page.add( 
         ft.Icon(ft.Icons.LOGIN, color=ft.Colors.PRIMARY, size=150),
