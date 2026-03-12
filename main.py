@@ -6,7 +6,6 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     
-    
     CorreoUS = ft.TextField(
         label = "Escribe Tu Correo Gmail",
         hint_text = "Escribe Tu Correo Gmail"
@@ -27,8 +26,9 @@ def main(page: ft.Page):
         color=ft.Colors.BLACK,
         bgcolor=ft.Colors.BLUE,
     )
-    page.add(    ft.Text(
-        value="Inicio De Sesion",
+    page.add( 
+        ft.Icon(ft.Icons.LOGIN, color=ft.Colors.PRIMARY, size=150),
+        ft.Text(value="Inicio De Sesion",
         size=30,
         weight=ft.FontWeight.BOLD,
         text_align=ft.TextAlign.CENTER,
