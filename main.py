@@ -56,8 +56,24 @@ def main(page: ft.Page):
         )
     page.add(
         ft.AppBar(
-            title
+            title=ft.Text("Panel Principal"),
+            bgcolor=ft.Colors.BLUE_GRAY_900,
+            color=ft.Colors.WHITE,
+            automatically_imply_leading=False
+        ),
+        ft.Colum(
+            [
+                ft.Text("Bienvenido al Sistema", size=25),
+                ft.Text("Has iniciado sesion correctamente"),
+            ],
+            expande=True,
+            aligment=ft.MainAxisAlignment.CENTER,
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         )
     )
-    
+    page.update()
+
+page.add(layout_login)
+
+if__name__ == "__main__":   
 ft.app(target=main)
